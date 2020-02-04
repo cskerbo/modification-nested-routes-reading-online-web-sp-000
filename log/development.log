@@ -4045,3 +4045,23 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/posts/16" for 73.140.242.122 at 2020-02-04 21:25:10 +0000
+Cannot render console from 73.140.242.122! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 21ms (Views: 17.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/1/posts/new" for 73.140.242.122 at 2020-02-04 21:25:12 +0000
+Cannot render console from 73.140.242.122! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"1"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (1.9ms)
+  Rendered posts/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
