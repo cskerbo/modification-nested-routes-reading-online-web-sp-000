@@ -4355,3 +4355,33 @@ Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.1ms)
 
 Started GET "/authors/1/posts/new" for 73.140.242.122 at 2020-02-04 21:28:38 +0000
 Cannot render console from 73.140.242.122! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"1"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (26.7ms)
+  Rendered posts/new.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 265ms (Views: 219.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/posts" for 73.140.242.122 at 2020-02-04 21:28:41 +0000
+Cannot render console from 73.140.242.122! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mKIW/kcdJgEKX/rkHnp/0WNXNr9sUhvGzF6xE2ulZyPDQwskohKlCGhPrusSRsrkJ6ZrxdtJenN9J7O8MFAq0A==", "post"=>{"title"=>"dfdfdf", "author_id"=>"", "description"=>"dfdfdfd"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Dfdfdf"], ["description", "dfdfdfd"], ["created_at", "2020-02-04 21:28:41.111304"], ["updated_at", "2020-02-04 21:28:41.111304"]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://165.227.60.187:40179/posts/7
+Completed 302 Found in 17ms (ActiveRecord: 12.9ms)
+
+
+Started GET "/posts/7" for 73.140.242.122 at 2020-02-04 21:28:41 +0000
+Cannot render console from 73.140.242.122! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 34ms (Views: 29.3ms | ActiveRecord: 0.3ms)
+
+
