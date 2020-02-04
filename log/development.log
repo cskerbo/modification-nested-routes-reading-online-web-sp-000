@@ -4417,3 +4417,22 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 34ms (Views: 30.8ms | ActiveRecord: 1.1ms)
 
 
+Started POST "/posts" for 73.140.242.122 at 2020-02-04 21:33:32 +0000
+Cannot render console from 73.140.242.122! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UffuJUAHknb6lNu28j9IFnV9LXEDDf6VdgYPr2W+VgoKFvP/pQgRf5iEj7n+A/0jMYxwC7QWnyDHfw0APksb+Q==", "post"=>{"title"=>"dfdfdfdfdfdf", "author_id"=>"1", "description"=>"dfdffgf"}, "commit"=>"Create Post"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at", "author_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Dfdfdfdfdfdf"], ["description", "dfdffgf"], ["created_at", "2020-02-04 21:33:32.639309"], ["updated_at", "2020-02-04 21:33:32.639309"], ["author_id", 1]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://165.227.60.187:40179/posts/9
+Completed 302 Found in 78ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/posts/9" for 73.140.242.122 at 2020-02-04 21:33:32 +0000
+Cannot render console from 73.140.242.122! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.7ms)
