@@ -4249,3 +4249,24 @@ Processing by AuthorsController#index as HTML
 Completed 200 OK in 218ms (Views: 208.7ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/authors/1" for 73.140.242.122 at 2020-02-04 21:27:54 +0000
+Cannot render console from 73.140.242.122! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering authors/show.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 1]]
+  Rendered authors/show.html.erb within layouts/application (37.3ms)
+Completed 200 OK in 52ms (Views: 49.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/authors/1/posts/new" for 73.140.242.122 at 2020-02-04 21:27:55 +0000
+Cannot render console from 73.140.242.122! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"1"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (35.5ms)
+  Rendered posts/new.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 74ms (Views: 72.7ms | ActiveRecord: 0.0ms)
+
+
