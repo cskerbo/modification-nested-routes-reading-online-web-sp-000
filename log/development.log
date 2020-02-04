@@ -3978,3 +3978,70 @@ Processing by PostsController#show as HTML
   Parameters: {"id"=>"16"}
   [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
   Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 95ms (Views: 60.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/posts/16/edit" for 73.140.242.122 at 2020-02-04 21:24:30 +0000
+Cannot render console from 73.140.242.122! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (3.3ms)
+  Rendered posts/edit.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/posts/16" for 73.140.242.122 at 2020-02-04 21:24:31 +0000
+Cannot render console from 73.140.242.122! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ShAiqDv7nMq/PIdEano5QN9KOwhRa/fsfAGdz18Y3+0R8T9y3vQfw90s00tmRox1m7tmcuZwllnNeJ9gBO2SHg==", "post"=>{"title"=>"New Post", "author_id"=>"", "description"=>"Author is present"}, "commit"=>"Update Post", "id"=>"16"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://165.227.60.187:40179/posts/16
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/16" for 73.140.242.122 at 2020-02-04 21:24:31 +0000
+Cannot render console from 73.140.242.122! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 52ms (Views: 50.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/1/posts/new" for 73.140.242.122 at 2020-02-04 21:24:36 +0000
+Cannot render console from 73.140.242.122! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"1"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (1.5ms)
+  Rendered posts/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 73.140.242.122 at 2020-02-04 21:24:40 +0000
+Cannot render console from 73.140.242.122! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZjntpoeBH9zfphnpKCFs5qCCl65ELg8JaWtMhEhAI4o92PB8Yo6c1b22TeYkHdnT5HPK1PM1brzYEk4rE7VueQ==", "post"=>{"title"=>"New Post", "author_id"=>"", "description"=>"fdfdfdf"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "New Post"], ["description", "fdfdfdf"], ["created_at", "2020-02-04 21:24:40.045556"], ["updated_at", "2020-02-04 21:24:40.045556"]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://165.227.60.187:40179/posts/17
+Completed 302 Found in 13ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/posts/17" for 73.140.242.122 at 2020-02-04 21:24:40 +0000
+Cannot render console from 73.140.242.122! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.1ms)
+
+
