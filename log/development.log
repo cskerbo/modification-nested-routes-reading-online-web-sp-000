@@ -4353,3 +4353,5 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/authors/1/posts/new" for 73.140.242.122 at 2020-02-04 21:28:38 +0000
+Cannot render console from 73.140.242.122! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
